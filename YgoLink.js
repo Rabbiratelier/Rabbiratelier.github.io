@@ -9,6 +9,7 @@ window.onload=function(){
 	document.body.innerHTML=document.body.innerHTML.replace(/《([^_＿!！].*?)》/g,'《<a href="http://yugioh-wiki.net/kamaseinu.cgi?$1" target="_blank">$1</a>》')
 	.replace(/《[!！](.*?)》/g,'《<a href="http://yugioh-wiki.net/kamaseinu.cgi?$1">$1</a>》')
 	.replace(/《[_＿](.*?)》/g,'《$1》')
+	.replace(/[A-Za-z0-9]/g, function(s) {return String.fromCharCode(s.charCodeAt(0) + 0xFEE0);})
 	.replace(/kamaseinu\.cgi\?融合"/g,'index.php?%A1%D4%CD%BB%B9%E7%A1%D5"');
 	excludeInput();
 }
