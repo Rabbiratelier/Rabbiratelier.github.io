@@ -8,7 +8,7 @@ function excludeInput(){
 window.onload=function(){
 	document.body.innerHTML=document.body.innerHTML.replace(/《([^_＿!！].*?)》/g,'《<a href="http://yugioh-wiki.net/kamaseinu.cgi?$1" target="_blank">$1</a>》')
 	.replace(/《[!！](.*?)》/g, function(all,s) {
-		s.replace(/[A-Za-z0-9]/g, function(s) {return String.fromCharCode(s.charCodeAt(0) + 0xFEE0);})
+		s = s.replace(/[A-Za-z0-9]/g, function(s) {return String.fromCharCode(s.charCodeAt(0) + 0xFEE0);})
 		return '《<a href="http://yugioh-wiki.net/kamaseinu.cgi?' + s + '">' + s + '</a>》';
 	})
 	.replace(/《[_＿](.*?)》/g,'《$1》')
