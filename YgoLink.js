@@ -16,7 +16,7 @@ window.onload=function(){
 		return '《<a href="http://yugioh-wiki.net/kamaseinu.cgi?《' + s + '》">' + s + '</a>》';
 	})
 	.replace(/《[_＿](.*?)》/g,'《$1》')
-	.replace(/kamaseinu\.cgi\?融合"/g,'index.php?%A1%D4%CD%BB%B9%E7%A1%D5"');
+	.replace(/kamaseinu\.cgi\?《融合》"/g,'index.php?%A1%D4%CD%BB%B9%E7%A1%D5"');
 
 	excludeInput();
 }
