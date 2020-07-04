@@ -9,7 +9,7 @@ window.onload=function(){
 	document.body.innerHTML=document.body.innerHTML
 	.replace(/《([^_＿!！].*?)》/g,function(all,s) {
 		s = s.replace(/[A-Za-z0-9]/g, function(a) {return String.fromCharCode(a.charCodeAt(0) + 0xFEE0);})
-		return '《<a href="http://yugioh-wiki.net/kamaseinu.cgi?《' + s + '》" target="_blank">' + s + '</a>》';
+		return '《<a href="http://yugioh-wiki.net/?' + encodeurlcomponent('《' + s + '》') + '" target="_blank">' + s + '</a>》';
 	})
 	.replace(/《[!！](.*?)》/g, function(all,s) {
 		s = s.replace(/[A-Za-z0-9]/g, function(a) {return String.fromCharCode(a.charCodeAt(0) + 0xFEE0);})
