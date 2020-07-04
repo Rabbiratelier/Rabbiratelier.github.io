@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUCJP">
+<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+<script src="encoding.js-master/encoding.js"></script>
+
+<script type="text/javascript">
+    var s=decodeURI(location.search.substring(1));
+    setTimeout("location.href='http://yugioh-wiki.net/?" + Encoding.urlEncode(Encoding.convert(s,{to:"EUCJP",from:"AUTO",type:"array"})) + "'",0);
+</script>
+<title>The Rabbiratelier</title>
+</head>
+<body>
+</body>
+</html>
