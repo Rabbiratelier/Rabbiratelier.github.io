@@ -6,8 +6,13 @@
 <script src="encoding.js-master/encoding.js"></script>
 
 <script type="text/javascript">
-    var s=decodeURI(location.search.substring(1));
-    setTimeout("location.replace('http://yugioh-wiki.net/?" + Encoding.urlEncode(Encoding.convert(s,{to:"EUCJP",from:"AUTO",type:"array"})) + ")'"),0);
+    function redirect(){
+        var s=decodeURI(location.search.substring(1));
+        s = Encoding.urlEncode(Encoding.convert(s,{to:"EUCJP",from:"AUTO",type:"array"}));
+        location.replace("http://yugioh-wiki.net/?" + s);
+    }
+    
+    setTimeout("redirect()",0);
 </script>
 <title>The Rabbiratelier</title>
 </head>
