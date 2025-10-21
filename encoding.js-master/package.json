@@ -14,7 +14,7 @@
     "power-assert": "^1.6.1",
     "uglify-js": "^3.6.0",
     "uglifyify": "^5.0.2",
-    "watchify": "^3.11.1"
+    "watchify": "^4.0.0"
   },
   "scripts": {
     "compile": "browserify src/index.js -o encoding.js -s Encoding -p [ bannerify --file src/banner.js ] --no-bundle-external --bare",
