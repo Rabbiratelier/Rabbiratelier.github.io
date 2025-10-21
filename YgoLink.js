@@ -15,11 +15,7 @@ window.onload=function(){
 		s = s.replace(/[A-Za-z0-9]/g, function(a) {return String.fromCharCode(a.charCodeAt(0) + 0xFEE0);})
 		return '《<a href="https://rabbiratelier.github.io/YgoLink.html??《' + s.replace(/[　]/g,' ') + '》">' + s + '</a>》';
 	})
-	.replace(/《[_＿](.*?)》/g,'《$1》')
-	.replace(/\+/g,'%20');
+	.replace(/《[_＿](.*?)》/g,'《$1》');
 
 	excludeInput();
 }
-
-
-
