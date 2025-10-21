@@ -16,9 +16,10 @@ window.onload=function(){
 		return '《<a href="https://rabbiratelier.github.io/YgoLink.html??《' + s.replace(/[　]/g,' ') + '》">' + s + '</a>》';
 	})
 	.replace(/《[_＿](.*?)》/g,'《$1》')
-	.replace(/\+/g,' ');
+	.replace(/\+/g,'%20');
 
 	excludeInput();
 }
+
 
 
