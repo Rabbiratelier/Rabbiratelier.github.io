@@ -8,7 +8,7 @@
 
 <script type="text/javascript">
     function redirect(){
-        var s=decodeURI(location.search.substring(1));
+        var s=decodeURI(location.search.substring(1)).replace(/\+/g, ' ');
         s = Encoding.urlEncode(Encoding.convert(s,{to:"EUCJP",from:"AUTO",type:"string"}));
         location.replace("http://yugioh-wiki.net/?" + s);
     }
@@ -20,4 +20,3 @@
 <body>
 </body>
 </html>
-
